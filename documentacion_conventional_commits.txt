@@ -1,0 +1,12 @@
+Tipo	Significa	Ejemplo
+
+feat	    Nueva funcionalidad	feat(ingesta): añadir lectura de ficheros CSV
+fix	        Corrección de un error	fix(etl): corregir formato de fechas
+docs	    Solo documentación	docs: actualizar README con instrucciones
+refactor	Reorganizar código sin cambiar lo que hace	refactor: separar limpieza en funciones
+test	    Añadir o cambiar tests	test: añadir pruebas de validación
+chore	    Mantenimiento, sin impacto funcional	chore: actualizar dependencias
+style, perf, ci, build	Formato, rendimiento, integración continua, compilación	
+
+
+git commit -m "test: add new test for data ingestion"
