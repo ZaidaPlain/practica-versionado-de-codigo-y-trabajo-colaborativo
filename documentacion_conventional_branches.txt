@@ -1,0 +1,34 @@
+1. Reglas obligatorias de Git (técnicas)
+
+Git rechaza nombres de rama que no cumplan git check-ref-format. Un nombre no puede:
+
+contener espacios ni los caracteres ~ ^ : ? * [ \
+contener .. ni @{
+empezar por - ni por .
+terminar en /, en . ni en .lock
+tener dos barras seguidas (//)
+
+1. Convención de nombres (la más usada)
+<tipo>/<id-ticket>-<descripcion-corta>
+Prefijo	Uso	Ejemplo
+feature/ o feat/  	                Nueva funcionalidad	feature/DE-42-carga-csv
+bugfix/ o fix/	                    Corrección	fix/DE-57-fechas-nulas
+hotfix/	                            Corrección urgente en producción	hotfix/error-login
+release/	                        Preparación de una versión	release/1.2.0
+docs/, chore/, refactor/, test/	    Igual que en los commits	docs/actualizar-readme
+
+Buenas prácticas:
+
+Minúsculas y guiones (kebab-case). Nada de espacios, tildes ni ñ.
+Corto y descriptivo: que se entienda sin abrirla.
+ID del ticket si usáis Jira o similar. Muchas herramientas enlazan la rama con la tarea automáticamente.
+Usar los mismos tipos que en Conventional Commits, para que todo sea coherente.
+
+Existe una propuesta comunitaria llamada Conventional Branch que formaliza esto, pero tiene mucha menos adopción que Conventional Commits.
+
+3. Estrategia de ramas (qué ramas existen y para qué)
+Esto es distinto de cómo se llaman. Las tres más conocidas:
+
+-Git Flow: ramas main y develop permanentes, más feature/*, release/* y hotfix/*. Es más pesada y pensada para releases planificadas.
+-GitHub Flow: solo main y ramas cortas por tarea que se integran con un Pull Request. Es la más sencilla, ideal para tus alumnos.
+-Trunk-based development: todo el mundo integra en main muy a menudo, con ramas que viven horas o pocos días.
