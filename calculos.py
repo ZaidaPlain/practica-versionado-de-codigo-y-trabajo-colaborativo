@@ -7,7 +7,6 @@ COLUMNAS = ["fecha", "producto", "precio"]
 IVA = 0.21
 
 
-
 def leer_ventas(ruta):
     # Lee el CSV y devuelve una lista de ventas ya validadas
     with open(ruta, newline="", encoding="utf-8-sig") as f:
